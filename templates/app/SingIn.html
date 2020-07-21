@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/singIn.css" %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <title>singIn</title>
+</head>
+<body>
+    <div class="jumbotron">
+    <h1>Welcome to the Columbus Rental LLC</h1>
+    <h2>We're star-up that does something</h2>
+
+    <h2>Sign up for our upcoming launch!</h2><br><br>
+    <form class="emailform" >
+    <label for="email">Email</label><br>
+    <input class="userinput " type="email"  name="userem" placeholder="Email" required><br>
+    <label for="userpass">Password</label><br>
+    <input class="userinput" type="password" name="userpass" placeholder="Password" required>
+    <small id="emailHelp" class="form-text text-muted">Forgot Password?</small><br><br>
+
+
+    <input type="submit" id="sub" name="" value="Login >">
+</div>
+    </form>
+</body>
+</html>

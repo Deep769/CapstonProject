@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rental</title>
+    <link rel="stylesheet" href="{% static "css/rental.css" %}"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background-image: url('{% static "images/4.jpg" %}');
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link navbar-brand" href="{% url 'application2' %}">Application Form</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link navbar-brand" href="{% url 'paymentForm' %}">Payment Form</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link navbar-brand" href="http://ec2-52-91-146-222.compute-1.amazonaws.com/">Help</a>
+            </li>
+
+
+        </ul>
+        <form action="https://www.google.com/search" method="GET" class="form-inline my-2 my-lg-0" target="_blank">
+            <input autocomplete="on" class="form-control mr-sm-2" name="q" type="search" placeholder="Search"
+                   aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 btn btn-warning text-dark" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<div>
+    <!-- <img src='{% static "images/4.jpg" %}' alt=""> -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 id="h1">Columbus Rental LLC</h1>
+
+            <div class="mx-auto text-primary ">
+                <h3>Mission Statement</h3>
+            </div>
+            <p>It is our mission is to set the standard of high performance and manage
+                <img src="{% static "images/2.jpg" %}" alt="didn't show!"
+                class="rounded float-right rounded-circle" id="image">
+                residential and commercial properties for the success of our clients. In doing
+                this we are ensuring all our residents have the best quality, most comforting and affordable
+                living experience possible. We strive to listen to customers who represent the marketplace.
+                The key to our growth and prosperity is a direct result of our exceptional management
+                team and together we strive for excellence and to ensure the success of our client,
+                the well-being of our properties and the future of Columbus Rentals LLC.
+            </p>
+            <div class="mx-auto text-primary ">
+                <h3>History</h3>
+            </div>
+            <p>Multifamily real estate is our passion. We love having the opportunity to create
+                a true sense of community while building careers and providing a means for personal
+                wealth through investment.Columbus Rentals LLC is a locally owned business that has
+                specialized in residential and commercial real estate & development since 1980. We
+                serve urban communities of Central Ohio with an eye toward historical preservation
+                as well as adding some modern rentals. Our goal is to provide our clients with new
+                innovative designs that accommodate their needs, budgets, and lifestyles while
+                maintaining whatever made that specific property special in the first place. We make
+                it a priority to provide quality workmanship, professionalism, integrity, and attention-to
+                detail on every project. 
+            </p>
+            <ol>
+                <li><strong>How difficult is it to rent a house in Columbus, OH?</strong></li>
+
+                <ul>There are currently 269 houses available for rent which fluctuated -1.03% over the last
+                    30-day period for Columbus, with 15.7k people recently looking for Columbus housing.
+                </ul>
+
+                <li><strong>What are the rental costs for houses in Columbus, OH?</strong></li>
+
+                <ul>The median rent in Columbus is $1,158. That's $311 below the national average rent of $1,469.
+                </ul>
+
+                <li><strong>What are people saying about living and renting in Columbus, OH?</strong></li>
+
+                <ul>HotPads collects real reviews from real people living in Columbus. Read through our 252 reviews
+                    for the various neighborhoods in Columbus to get a sense for how people feel about living there.
+                </ul>
+
+                <li><strong>Next use the Grid system to add in thumbnail pictures of Houese!</strong></li>
+
+                <ul>
+                    <img src="{% static "images/3.jpg" %}" alt="" id="image2">
+                    <li><a href="https://photos.zillowstatic.com/cc_ft_960/ISvclxf5zf9v6a0000000000.webp">2023-2025
+                        Sullivant
+                        Ave, Columbus, OH 43223</a></li>
+                    <li><a href="https://photos.zillowstatic.com/cc_ft_960/ISjr0mg8i213bx1000000000.webp">156
+                        Clinton
+                        St,
+                        Columbus, OH 43202 </a></li>
+                    <li><a href="https://photos.zillowstatic.com/cc_ft_960/ISzfyck89ey2q41000000000.webp">2927
+                        Indianola
+                        Ave,
+                        Columbus, OH 43202 </a></li>
+                    <li><a href="https://photos.zillowstatic.com/cc_ft_960/ISzjpc9241srm41000000000.webp">799 E 2nd
+                        Ave,
+                        Columbus, OH 43201 </a></li>
+                    <li><a href="https://photos.zillowstatic.com/cc_ft_960/IS3r1mjy1au7cw0000000000.webp">1124 E
+                        Kossuth
+                        St,
+                        Columbus, OH 43206 </a></li>
+                    <li><a href="https://photos.zillowstatic.com/cc_ft_960/ISbxnxi9jrw9v01000000000.webp">41 N
+                        Central
+                        Ave,
+                        Columbus, OH 43222 </a></li>
+                </ul>
+                <br>
+
+                <p>That's it. Feel free to play around with this project and style it more to your liking.
+                    The main focuses of this project are the uses of NavBar, Jumbotron, Form, Container,
+                    and the Grid System.
+                </p>
+                <!-- </div> -->
+                <p>Painting concrete frogs, wooden fencing, and playground equipment, close to IBP 20 employees –
+                    and
+                    their
+                    children –
+                    contributed their time and effort over two days in June at the Homeport affordable housing
+                    community
+                    on the
+                    southwest
+                    side of Columbus. “We believe strongly that everyone deserves a safe place to live and play,”
+                    said
+                    Installed
+                    Building
+                    Products Foundation President Kelly Clifford Riehl. Before IBP employees added the finishing
+                    touches, Homeport
+                    arranged
+                    for playground equipment to be removed or repaired. Swings were added. A walkway was also
+                    extended
+                    to the
+                    playground.
+                    The improvements will benefit 249 children ages 17 and younger living in Emerald Glen. Use of
+                    the
+                    playground
+                    will be in
+                    line with recreational safety guidelines established by the state in the wake of the
+                    Coronavirus,
+                    said
+                    Homeport Asset Manager
+                    Josh Martin.</p>
+                <p>The IBP grant came from bonus funds contributed by IBP C-Suite employees as well as payroll
+                    deductions from
+                    other employees,
+                    Riehl said. IBP is of one of the nation's largest new residential insulation installers. Riehl
+                    said
+                    the
+                    company loves the
+                    idea of providing a hands-on contribution in addition to the dollars, “to see our grants in
+                    action.”
+                    Brittany
+                    Bainum, Director
+                    of Employee Engagement & Development at Installed Building Products, was joined in effort by her
+                    children,
+                    Ellie, 10, Hali, 8
+                    and Brock, 5. “Once Kelly said we could bring our kids, I said ‘were in,’” Bainum said. IBP
+                    Purchasing Manager
+                    Ryan Eickholt said
+                    he enjoyed making a hands-on difference. “When we can find a project that helps the community,
+                    we
+                    are
+                    excited,” Eickholt said.
+                    IBP Staff Accountant Levi Dupler said the refurbishing effort was rewarding given who would
+                    benefit.
+                    “That’s the best part about it, that we are helping kids,” Dupler said.</p>
+                <!-- </div>
+            <div class="container"> -->
+                <h2 class="text-primary">Pictures of Houses</h2><br>
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <figure class="figure">
+                            <a
+                                    href="https://www.zillow.com/homedetails/2023-2025-Sullivant-Ave-Columbus-OH-43223/296619869_zpid/"><img
+                                    src="https://photos.zillowstatic.com/cc_ft_960/ISvclxf5zf9v6a0000000000.webp"
+                                    alt="" class="img-thumbnail"></a>
+                            <figcaption class="figure-caption"><strong>Specification: </strong>$1,100/mo | 3bd | 2ba
+                                |
+                                1,600 sqft <br>
+                                <strong>Location: </strong>2023-2025 Sullivant Ave, Columbus, OH 43223
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <figure class="figure">
+                            <a
+                                    href="https://www.zillow.com/homedetails/156-Clinton-St-Columbus-OH-43202/2101647056_zpid/"><img
+                                    src="https://photos.zillowstatic.com/cc_ft_960/ISjr0mg8i213bx1000000000.webp"
+                                    alt="" class="img-thumbnail"></a>
+                            <figcaption class="figure-caption"><strong>Specification: </strong>$1,200/mo | 3bd | 1ba
+                                |
+                                1,200 sqft<br>
+                                <strong>Location: </strong>156 Clinton St, Columbus, OH 43202
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <figure class="figure">
+                            <a
+                                    href="https://www.zillow.com/homedetails/2927-Indianola-Ave-Columbus-OH-43202/33850817_zpid/"><img
+                                    src="https://photos.zillowstatic.com/cc_ft_960/ISzfyck89ey2q41000000000.webp"
+                                    alt="" class="img-thumbnail"></a>
+                            <figcaption class="figure-caption"><strong>Specification: </strong>$1,500/mo | 3bd |
+                                2.5ba |
+                                1,800 sqft<br>
+                                <strong>Location: </strong>2927 Indianola Ave, Columbus, OH 43202
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <figure class="figure">
+                            <a
+                                    href="https://www.zillow.com/homedetails/799-E-2nd-Ave-Columbus-OH-43201/33827720_zpid/"><img
+                                    src="https://photos.zillowstatic.com/cc_ft_960/ISzjpc9241srm41000000000.webp"
+                                    alt="" class="img-thumbnail"></a>
+                            <figcaption class="figure-caption"><strong>Specification: </strong>$1,600/mo | 4bd | 2ba
+                                |
+                                1,376 sqft<br>
+                                <strong>Location: </strong>799 E 2nd Ave, Columbus, OH 43201
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <figure class="figure">
+                            <a
+                                    href="https://www.zillow.com/homedetails/1124-E-Kossuth-St-Columbus-OH-43206/33842891_zpid/"><img
+                                    src="https://photos.zillowstatic.com/cc_ft_960/IS3r1mjy1au7cw0000000000.webp"
+                                    alt="" class="img-thumbnail"></a>
+                            <figcaption class="figure-caption"><strong>Specification: </strong>$2,250/mo | 3bd |
+                                2.5ba |
+                                1,743 sqft<br>
+                                <strong>Location: </strong>1124 E Kossuth St, Columbus, OH 43206
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <figure class="figure">
+                            <a
+                                    href="https://www.zillow.com/homedetails/41-N-Central-Ave-Columbus-OH-43222/33884126_zpid/"><img
+                                    src="https://photos.zillowstatic.com/cc_ft_960/ISbxnxi9jrw9v01000000000.webp"
+                                    alt="" class="img-thumbnail"></a>
+                            <figcaption class="figure-caption"><strong>Specification: </strong>$989/mo | 2bd | 1ba |
+                                676
+                                sqft<br>
+                                <strong>Location: </strong>41 N Central Ave, Columbus, OH 43222
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-secondary text-white page-footer font-small teal pt-4">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+                <div class="container" align='center'>
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                    <a href="https://accounts.google.com" class="fa fa-google"></a>
+                    <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a> <br><br>
+                    <p id="fp">© 2020 Copyright: Columbus Rental LLC</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-md-0 mb-3">
+                <h5 class="text-uppercase font-weight-bold">Help </h5>
+                <h6>Please Contact us for more information or any kind of troubles. We will happy to help you!</h6>
+                <h3>1-265-601-6021</h3>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="{% static " javascript
+/rental.js" %}"></script>
+
+</html>

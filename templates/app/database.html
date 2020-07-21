@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static "css/database.css" %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="container  jumbotron ">
+    <h1 id="h1">Payment Database</h1><br>
+    <h2>Here are your access records:</h2><br>
+
+
+    <div class="table table-info table table-striped">
+      {% if user %}
+          <table>
+            <thead>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip</th>
+              <th>Credit_Card</th>
+
+            </thead>
+
+            {% for person in user %}
+              <tr>
+                <td>{{ person.full_name }}</td>
+                <td>{{ person.address }}</td>
+                <td>{{ person.email }}</td>
+                <td>{{ person.city }}</td>
+                <td>{{ person.state }}</td>
+                <td>{{ person.zip_code }}</td>
+                <td>{{ person.card_num }}</td>
+
+              </tr>
+            {% endfor %}
+        </table>
+
+      {% else %}
+        <p>No Access Records. Table Not Created.</p>
+      {% endif %}
+    </div>
+    </div>
+
+
+  </body>
+</html>

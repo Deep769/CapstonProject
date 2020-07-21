@@ -1,0 +1,12 @@
+#h1 {
+    color: blueviolet;
+    text-align: center;
+}
+
+table {
+    border: 3px solid black;
+}
+
+th, td{
+    border: 2px solid blueviolet;
+}

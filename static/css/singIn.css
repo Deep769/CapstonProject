@@ -1,0 +1,25 @@
+
+body{
+    background-color: rgb(1, 1, 24);
+    color: white;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    border: 60px solid #5784c0;
+    border-top: 0px;
+    margin: 0px;
+}
+
+p{
+    padding-top: 3% ;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#sub{
+    background-color: #ff9d1c;
+    height: 70px;
+    width: 120px;
+    border-radius: 15px;
+    border: 5px solid rgb(1, 1, 24);
+    font-size: 1em;
+}
